@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+@font-face{
+	font-family: 'Dancing Script', regular;
+	src: local('Dancing Scrip') url(../fuentes/DancingScript-Regular.ttf) format('ttf');
+}
+
+body{
+	background-color: #02010a;
+	font-family: Dancing Script;
+}
+
+/*-----------------------------------------------------------------------------------------------
+	CABEZA DE LA PAGINA
+-----------------------------------------------------------------------------------------------*/
+.cabecera{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #5b7989;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-ms-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+ 	
+	/*Disposición del header = Técnica ColumnDrop.*/
+   	display: -webkit-flex;
+  	-webkit-flex-direction: row wrap;	
+	display: flex;
+	flex-flow: row wrap;
+}
+.cab1{
+	width: 50%;
+}
+.cab1 h1{
+	color: white;
+	padding-left: 1em;
+	text-shadow: 2px 2px 2px #02010A;
+}
+.cab2{
+	width: 50%;
+}
+.cab2 nav ul{
+	list-style: none;	/*Quitar simbolos de la lista de la barra de menu.*/
+	float: right;		/*Coloca en la derecha a barra de menu.*/
+	padding-top: 0.5em;
+	padding-right: 3em;
+}
+.cab2 nav ul li{
+	display: inline;	/*Ordenar en linea a los elementos de la lista de la barra de menu.*/
+	padding-right: 1em;
+}
+a:link, :visited{		
+	/*Personalizar los link de la lista de la barra de menu.*/
+	color: white;
+	font-size: 1.5em;
+}
+a:hover{		
+	/*Personalizar los link de la lista de la barra de menu cuando pasa el mouse por encima.*/
+	text-decoration: none;
+}	
+
+/*-----------------------------------------------------------------------------------------------
+	SECCION CENTRAL DE LA PAGINA
+-----------------------------------------------------------------------------------------------*/
+.contenido{
+/*	width: 900px;
+*/	margin: 0;
+	padding: 0;
+	/*Disposición del section = Técnica ColumnDrop.*/
+   	display: -webkit-flex;
+  	-webkit-flex-direction: row wrap;	
+	display: flex;
+	flex-flow: row wrap;
+}
+#c1{
+	width: 100%;
+	text-align: center;
+	background-color: #82c3a6;
+}
+#c2i, #c3d{
+	width: 50%;
+	text-align: center;
+	background-color: #d5c75f;
+}
+section .contenido div figure img{
+	border: 1px solid black;
+	box-shadow: 2px 2px 2px #02010A;
+}
+
+@media screen and (max-width: 900px){
+	#c2i, #c3d{
+		width: 100%;
+	}
+}
+/*-----------------------------------------------------------------------------------------------
+	PIE DE LA PAGINA
+-----------------------------------------------------------------------------------------------*/
+.pieDePagina{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #C6d5c5;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-ms-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;	
+	/*Disposición del section = Técnica ColumnDrop.*/
+   	display: -webkit-flex;
+  	-webkit-flex-direction: row wrap;	
+	display: flex;
+	flex-flow: row wrap;
+}
+.pie1{
+	width: 25%;
+}
+.pie1 ul{
+	list-style: none;		/*Quitar simbolos de la lista de Contacto.*/
+}
+.pie2{
+	width: 25%;
+}
+.pie3{
+	width: 25%;
+}
+.pie3 ul{
+	list-style: none;		/*Quitar simbolos de la lista de redes.*/
+}
+.pie3 ul li a img{
+	/*Ajustar icono de red con el texto*/
+	padding-right: 0.5em;
+	width: 1.1em;
+}
+.pie4{
+	width: 25%;
+}
+.pieDePagina[class^=pie]{
+	color: black;
+	text-align: left;
+	padding: 0.2em;
+}
+.pieDePagina[class^=pie] h2{
+	font-size: 2em;
+	padding-left: 0.5em;
+}
+@media screen and (max-width: 900px){
+	.pie1{
+		width: 100%;
+		order: 1;
+	}
+	.pie2{
+		width: 100%;
+		order: 2;
+	}
+	.pie3{
+		width: 100%;
+		order: 3;
+	}
+	.pie4{
+		width: 100%;
+		order: 4;
+	}
+}
+
